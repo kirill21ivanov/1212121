@@ -6,9 +6,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    ui->but_start->setDisabled(true);
-    connect(ui->name, &QLineEdit::textChanged, this, &MainWindow::checkFields);
-    connect(ui->group, &QLineEdit::textChanged, this, &MainWindow::checkFields);
 }
 
 MainWindow::~MainWindow()
@@ -18,18 +15,14 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_but_start_clicked()
 {
-    QString name = ui->name->text();
-    QString group = ui->group->text();
-    qDebug() << "Студент: " << name << "Группа: " << group;
-    this->hide(); // скрыть регистрацию
+QString name = ui->name->text();
+QString group = ui->group->text();
+if (name == "" && group == ""){
+this->ui->text_error->setText("Вы сможете начать тестирование после того как заполните поля!");
+}else{
+    this->hide();
     test = new MainWindouTest(name, group);
-    test->showFullScreen(); // полный экрран
-//    test->show();
+    test->setStyleSheet("background-image: url(:/icon.png); background-repeat: no-repeat; background-position: center;");
+    test->showFullScreen();
 }
-
-void MainWindow::checkFields() {
-    QString nameText = ui->name->text();
-    QString groupText = ui->group->text();
-    bool fieldsFilled = !nameText.isEmpty() && !groupText.isEmpty();
-    ui->but_start->setEnabled(fieldsFilled);
 }

@@ -10,10 +10,8 @@ MainWindowFin::MainWindowFin(const QString &name, const QString &group, const in
     this->ui->part_kol->setText(scoreString);
     this->ui->part_name->setText(name);
     this->ui->part_groups->setText(group);
-
-    int kol = 2; // Initialize the 'kol' variable
-    int prog = 0; // Initialize the 'prog' variable
-
+    int kol = 2;
+    int prog = 0;
     if (userScore > 18) {
         kol = 5;
     } else if (userScore > 14) {
@@ -21,14 +19,9 @@ MainWindowFin::MainWindowFin(const QString &name, const QString &group, const in
     } else if (userScore > 10) {
         kol = 3;
     }
-
-    // Calculate the 'prog' percentage
     prog = (userScore * 100) / 20;
-
-    // You can display these values in your UI if needed
     QString kolString = QString::number(kol);
     this->ui->part_ov->setText(kolString);
-
     QString progString = QString::number(prog);
     this->ui->part_prog->setText(progString + "%");
 }

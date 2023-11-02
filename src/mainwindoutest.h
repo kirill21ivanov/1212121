@@ -19,10 +19,9 @@ class MainWindouTest : public QMainWindow {
     Q_OBJECT
 
 public:
-//    explicit MainWindouTest(QWidget *parent = nullptr);
     explicit MainWindouTest(const QString &name, const QString &group, QWidget *parent = nullptr);
     ~MainWindouTest();
-    int userScore = 0;  // баллы
+    int userScore = 0;
     QTimer *timer;
     QTime timeRemaining;
     MainWindowFin *a;
@@ -69,7 +68,6 @@ public:
     bool question19 = false;
     bool question20 = false;
 public slots:
-    // Ваш слот для обновления отображения таймера
     void updateTimerDisplay();
     void on_but_1_clicked();
     void on_but_2_clicked();
@@ -94,15 +92,13 @@ public slots:
     void checkAnswer();
     void on_exit_clicked();
     void shuffleOptions(QString &option1, QString &option2, QString &option3);
-//    void customShuffle(QString *array, int size, std::mt19937 &generator);
 
 private slots:
-//    void checkAnswer();
 
 private:
     QString correctAnswer;
-    bool questionAnswered; // Флаг для отслеживания, был ли уже дан ответ
-    QPushButton *selectedButton; // Указатель на выбранную кнопку
+    bool questionAnswered;
+    QPushButton *selectedButton;
 
 private:
     Ui::MainWindouTest *ui;

@@ -8,6 +8,8 @@
 #include <QtUiTools/QUiLoader>
 #include <QWidget>
 #include "mainwindoutest.h"
+#include <QApplication>
+#include <QPixmap>
 
 namespace Ui {
 class MainWindow;
@@ -27,7 +29,6 @@ private:
     MainWindouTest *test;
 private slots:
     void on_but_start_clicked();
-    void checkFields();
 };
 
 #endif // MAINWINDOW_H

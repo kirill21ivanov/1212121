@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/ic">
+        <file>img/images_1.png</file>
+        <file>img/images_2.jpg</file>
+        <file>img/icon.png</file>
+        <file>img/blue-and-orange-cupboards_23-2148518393.jpeg</file>
+        <file>img/dark-blue-paint-minimal-background_53876-102518.jpeg</file>
+        <file>img/imgonline-com-ua-Resize-feryCtQ435qjMh.jpg</file>
+        <file>img/imgonline-com-ua-Resize-ltXfteYJeXYUVqcw.jpg</file>
+        <file>img/imgonline-com-ua-Resize-ilXPe6hEkgeHNd.jpg</file>
+    </qresource>
+</RCC>
